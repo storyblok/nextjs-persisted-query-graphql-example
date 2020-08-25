@@ -1,7 +1,13 @@
 import '../styles/globals.css'
+import { ApolloProvider } from '@apollo/react-hooks'
+import withData from '../util/apollo-client'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps, apollo }) {
+  return (
+    <ApolloProvider client={apollo}>
+      <Component {...pageProps} />
+    </ApolloProvider>
+   )
 }
 
-export default MyApp
+export default withData(MyApp)
