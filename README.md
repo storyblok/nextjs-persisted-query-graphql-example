@@ -1,6 +1,12 @@
+# Example of Next.js + Apollo + Storyblok GraphQL api with persisted queries
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+It uses an Apollo client to make GraphQL requests with persisted queries to leverage the CDN cache of Storyblok's api.
+
 ## Getting Started
+
+Before you start exchange the access token in `util/apollo-client.js` with the one from your Storyblok project.
 
 First, run the development server:
 
